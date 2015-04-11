@@ -1,20 +1,14 @@
-var createNamer = require('../namer').create;
-var createProbable = require('probable').createProbable;
+var createNamer = require('../namer');
 var seedrandom = require('seedrandom');
-var assembleGroupsIntoTitle = require('../assemble-groups-into-title');
-
-// var cmdOpts = require('nomnom').parse();
 
 var seed = (new Date()).toISOString();
-// seed = '2015-04-10T05:16:11.618Z';
+// seed = '2015-04-11T12:15:41.823Z';
 console.log('seed:', seed);
 
 var namer = createNamer({
-  probable: createProbable({
-    random: seedrandom(seed)
-  })
+  random: seedrandom(seed)
 });
 
 var nameGroups = namer.name();
 console.log(nameGroups);
-console.log(assembleGroupsIntoTitle(nameGroups));
+console.log(namer.assembleGroupsIntoTitle(nameGroups));

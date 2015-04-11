@@ -1,6 +1,8 @@
 var _ = require('lodash');
 var exportMethods = require('export-methods');
 var jsonfile = require('jsonfile');
+var defaultProbable = require('probable');
+var assembleGroupsIntoTitle = require('./assemble-groups-into-title');
 
 var wordPool = jsonfile.readFileSync(__dirname + '/data/wordpool.json');
 
@@ -23,18 +25,24 @@ function addWordToTypeList(word, type) {
   list.push(word);
 }
 
-// console.log(JSON.stringify(wordsForTypes, null, '  '));
-
-// base
-// add modifier
-//  - modifier says which modifier generators it works with in parallel.
-//  - modifier says which modifier generators can modify it.
-
 function createNamer(opts) {
   var probable;
+  var random;
 
   if (opts) {
     probable = opts.probable;
+    random = opts.random;
+  }
+
+  if (!probable) {
+    if (random) {
+      probable = defaultProbable.createProbable({
+        random: random
+      });
+    }
+    else {
+      probable = defaultProbable;
+    }
   }
 
   function name() {
@@ -140,9 +148,7 @@ function createNamer(opts) {
     return group;
   }
 
-  return exportMethods(name);
+  return exportMethods(name, assembleGroupsIntoTitle);
 }
 
-module.exports = {
-  create: createNamer
-};
+module.exports = createNamer;

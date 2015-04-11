@@ -1,25 +1,23 @@
 {
-  "name": "triple-a-titles",
+  "name": "triple-a-namer",
   "version": "1.0.0",
-  "description": "A bot that creates AAA game titles.",
-  "main": "index.js",
+  "description": "Creates AAA game titles.",
+  "main": "namer.js",
   "scripts": {
     "test": "make test"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jimkang/triple-a-titles.git"
+    "url": "git@github.com:jimkang/triple-a-namer.git"
   },
   "keywords": [],
   "author": "Jim Kang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jimkang/triple-a-titles/issues"
+    "url": "https://github.com/jimkang/triple-a-namer/issues"
   },
-  "homepage": "https://github.com/jimkang/triple-a-titles",
-  "devDependencies": {
-    "tape": "^3.0.3"
-  },
+  "homepage": "https://github.com/jimkang/triple-a-namer",
+  "devDependencies": {},
   "dependencies": {
     "conform-async": "^1.1.1",
     "export-methods": "^1.1.0",
@@ -27,7 +25,6 @@
     "lodash": "^3.6.0",
     "probable": "^1.4.0",
     "seedrandom": "^2.3.11",
-    "titlecase": "^1.0.2",
-    "twit": "^1.1.20"
+    "titlecase": "^1.0.2"
   }
 }

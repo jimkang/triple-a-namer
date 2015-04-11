@@ -1,32 +1,52 @@
-triple-a-titles
+triple-a-namer
 ===============
 
-A bot that creates AAA game titles.
+Creates AAA game titles.
 
 Installation
 ------------
 
-Clone this repo.
-
-Then, create a `config.js` file in the project root that contains [Twitter API keys](https://apps.twitter.com/). Example:
-
-    module.exports = {
-      twitter: {
-        consumer_key: 'asdfkljqwerjasdfalpsdfjas',
-        consumer_secret: 'asdfasdjfbkjqwhbefubvskjhfbgasdjfhgaksjdhfgaksdxvc',
-        access_token: '9999999999-zxcvkljhpoiuqwerkjhmnb,mnzxcvasdklfhwer',
-        access_token_secret: 'opoijkljsadfbzxcnvkmokwertlknfgmoskdfgossodrh'
-      }
-    };
+    npm install triple-a-namer
 
 Usage
 -----
 
-    make run
+    var createTripleANamer = require('triple-a-namer');
+    var namer = createTripleANamer()
+    var nameGroups = namer.name();
+    console.log(nameGroups);
 
-You can experiment with it on the command line by running:
+Output:
 
-    node tools/run-namer.js
+    [ { base: 'sith',
+        prefix: 'final',
+        suffix: 'evolution',
+        ordinal: 'EX remastered' },
+      { base: 'squadron',
+        prefix: 'stalker',
+        preprefix: 'black',
+        article: 'the',
+        connector: ':' } ]
+
+You can format groups into readable titles like so:
+
+    console.log(namer.assembleGroupsIntoTitle(nameGroups));
+
+Output:
+
+    Final Sith Evolution EX Remastered: The Black Stalker Squadron
+
+If you want to create a namer that uses a random function that creates reproducible outcomes, you can use something like [seedrandom](https://www.npmjs.com/package/seedrandom) and pass it to `create`:
+
+    var seedrandom = require('seedrandom');
+    var seed = (new Date()).toISOString();
+    var namer = createNamer({
+      random: seedrandom(seed)
+    });
+
+To try it from the command line rather than as part of a program:
+
+    node node_modules/triple-a-namertools/run-namer.js
 
 Structure
 ---------
@@ -42,9 +62,6 @@ Structure
 **namer.js** Loads `wordpool.json` and creates a reverse-indexed dictionary of it, `wordsForTypes` so that it can find words of a type, such as `prefix`. Then, it creates 1-2 word groups, each of which starts with a base, then may add one or two prefixes and a suffix. Then, it sprinkles in "the" or "of" and maybe an ordinal, like "2".
 
 **assemble-groups-into-title** converts an array of groups into a title string.
-
-**post-a-triple-a-title** calls `namer.name`, then passes the result to `assembleGroupsIntoTitle`, then posts it to Twitter.
-
 
 License
 -------
