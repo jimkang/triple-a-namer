@@ -7,7 +7,8 @@
   "squadron": [
     "base",
     "suffix",
-    "article-object"
+    "article-object",
+    "cannotattachsuffix"
   ],
   "troopers": [
     "base",
@@ -28,6 +29,7 @@
   "batallion": [
     "base",
     "suffix",
+    "cannotattachsuffix",
     "article-object"
   ],
   "force": [
@@ -51,7 +53,8 @@
   "call": [
     "base",
     "article-object",
-    "cannotattachsuffix"
+    "cannotattachsuffix",
+    "cannotbeprefixed"
   ],
   "survival": [
     "base",
@@ -62,7 +65,7 @@
   ],
   "vault": [
     "base",
-    "prefix",
+    "suffix",
     "article-object"
   ],
   "hunter": [
@@ -132,12 +135,14 @@
   "breath": [
     "base",
     "article-object",
-    "of-object"
+    "of-object",
+    "cannotattachsuffix"
   ],
   "evolution": [
     "base",
     "suffix",
-    "of-object"
+    "of-object",
+    "cannotattachsuffix"
   ],
   "duty": [
     "of-object",
@@ -167,7 +172,8 @@
   "darkness": [
     "base",
     "of-object",
-    "article-object"
+    "article-object",
+    "cannotattachsuffix"
   ],
   "dark": [
     "prefix",
@@ -178,7 +184,8 @@
     "of-object",
     "article-object",
     "prefix",
-    "suffix"
+    "suffix",
+    "cannotattachsuffix"
   ],
   "black": [
     "of-object",
@@ -225,7 +232,8 @@
   "gears": [
     "base",
     "of-object",
-    "article-object"
+    "article-object",
+    "cannotattachsuffix"
   ],
   "complex": [
     "base",
@@ -250,7 +258,8 @@
     "base",
     "article-object",
     "prefix",
-    "suffix"
+    "suffix",
+    "cannotattachsuffix"
   ],
   "warrior": [
     "base",
@@ -307,14 +316,16 @@
     "attached-suffix",
     "base",
     "suffix",
-    "article-object"
+    "article-object",
+    "cannotattachsuffix"
   ],
   "enemy": [
     "prefix",
     "suffix"
   ],
   "front": [
-    "base"
+    "base",
+    "cannotattachsuffix"
   ],
   "new": [
     "prefix",
@@ -324,7 +335,8 @@
     "base",
     "article-object",
     "of-object",
-    "suffix"
+    "suffix",
+    "cannotattachsuffix"
   ],
   "silent": [
     "prefix"
@@ -352,7 +364,8 @@
     "base"
   ],
   "bullets": [
-    "base" 
+    "base",
+    "cannotattachsuffix"
   ],
   "strike": [
     "base",
@@ -429,14 +442,16 @@
   ],
   "tactics": [
     "base",
-    "suffix"
+    "suffix",
+    "cannotattachsuffix"
   ],
   "supreme": [
     "suffix"
   ],
   "rondo": [
     "base",
-    "of-object"
+    "of-object",
+    "cannotattachsuffix"
   ],
   "synchronicity": [
     "base",
@@ -461,7 +476,8 @@
   "ascendance": [
     "base",
     "suffix",
-    "article-object"
+    "article-object",
+    "cannotattachsuffix"
   ],
   "prison": [
     "base",
@@ -517,7 +533,8 @@
     "base",
     "suffix",
     "article-object",
-    "prefix"
+    "prefix",
+    "cannotattachsuffix"
   ],
   "protocol": [
     "base",
@@ -539,7 +556,8 @@
   "carnage": [
     "suffix",
     "base",
-    "of-object"
+    "of-object",
+    "cannotattachsuffix"
   ],
   "revengenance": [
     "base",
@@ -555,12 +573,12 @@
     "base",
     "suffix",
     "prefix",
-    "of-object"    
+    "of-object"
   ],
   "justice": [
     "base",
     "suffix",
-    "of-object"    
+    "of-object"
   ],
   "beyond": [
     "ordinal"
@@ -578,8 +596,7 @@
   ],
   "god": [
     "base",
-    "prefix",
-    "suffix"
+    "prefix"
   ],
   "devils": [
     "base",
