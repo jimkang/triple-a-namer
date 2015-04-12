@@ -110,13 +110,9 @@
     "cannotattachsuffix"    
   ],
   "hard": [
-    "prefix"
-  ],
-  "hardline": [
+    "prefix",
     "base",
-    "suffix",
-    "article-object",
-    "cannotattachsuffix"
+    "suffix"
   ],
   "far": [
     "prefix",
@@ -696,5 +692,16 @@
     "suffix",
     "cannotattachsuffix",
     "article-object"
+  ],
+  "tower": [
+    "base"
+  ],
+  "lands": [
+    "attached-suffix",
+    "base",
+    "cannotattachsuffix"
+  ],
+  "line": [
+    "attached-suffix"
   ]
 }
