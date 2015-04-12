@@ -74,15 +74,17 @@ function createNamer(opts) {
       base: probable.pickFromArray(bases)
     };
 
-    group.prefix =
-      probable.pickFromArray(_.without(wordsForTypes.prefix, group.base));
+    if (wordPool[group.base].indexOf('cannotbeprefixed') == -1) {
+      group.prefix =
+        probable.pickFromArray(_.without(wordsForTypes.prefix, group.base));
 
-    if (wordPool[group.prefix].indexOf('cannotbeprefixed') === -1 &&
-      probable.roll(5) == 0) {
+      if (wordPool[group.prefix].indexOf('cannotbeprefixed') === -1 &&
+        probable.roll(5) == 0) {
 
-      group.preprefix = probable.pickFromArray(
-        _.without(wordsForTypes.prefix, group.base, group.prefix)
-      );
+        group.preprefix = probable.pickFromArray(
+          _.without(wordsForTypes.prefix, group.base, group.prefix)
+        );
+      }
     }
 
     if (wordPool[group.base].indexOf('cannotattachsuffix') === -1 &&
@@ -94,11 +96,22 @@ function createNamer(opts) {
     }
 
     var suffixChanceBar = 0;
+
     if (group.prefix) {
       suffixChanceBar += 2;
     }
     if (group.preprefix) {
       suffixChanceBar += 1;
+    }
+
+    if (group.attachedSuffix &&
+      wordPool[group.attachedSuffix].indexOf('cannotbesuffixed') !== -1) {
+
+      suffixChanceBar = 100;
+    }
+
+    if (wordPool[group.base].indexOf('cannotbesuffixed') !== -1) {
+      suffixChanceBar = 100;
     }
 
     if (probable.rollDie(3) > suffixChanceBar) {

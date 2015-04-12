@@ -715,6 +715,7 @@
     "base",
     "suffix",
     "cannotattachsuffix",
-    "attached-suffix"
+    "attached-suffix",
+    "cannotbesuffixed"
   ]
 }
