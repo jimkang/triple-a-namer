@@ -49,7 +49,7 @@ function createNamer(opts) {
     var group1 = addArticlesToGroup(makeGroup(wordsForTypes.base));
     var groups = [group1];
 
-    if (probable.roll(3) !== 0) {
+    if (probable.roll(3) === 0) {
       var group2 = addConnectorToGroup(addArticlesToGroup(
         makeGroup(wordsForTypes.base)
       ));
@@ -62,7 +62,7 @@ function createNamer(opts) {
       addOrdinalToGroup(group1);
     }
 
-    if (group2 && probable.roll(group1.ordinal ? 10 : 3) === 0) {
+    if (group2 && probable.roll(group1.ordinal ? 10 : 5) === 0) {
       addOrdinalToGroup(group2);
     }
 
@@ -142,7 +142,7 @@ function createNamer(opts) {
       group.ordinal = probable.pickFromArray(wordsForTypes['numeric-ordinal']);
     }
 
-    if (probable.roll(5) < 2) {
+    if (probable.roll(8) === 0) {
       group.ordinal += ' ' + probable.pickFromArray(wordsForTypes.ordinal);
     }
     return group;
