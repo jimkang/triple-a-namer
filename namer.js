@@ -122,7 +122,7 @@ function createNamer(opts) {
   }
 
   function addConnectorToGroup(group) {
-    if (wordPool[group.base].indexOf('of-object') !== -1) {
+    if (wordPool[group.base].indexOf('of-object') !== -1 && !group.prefix) {
       if (probable.roll(2) === 0) {
         group.connector = 'of';
       }
