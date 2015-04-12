@@ -703,5 +703,18 @@
   ],
   "line": [
     "attached-suffix"
+  ],
+  "havoc": [
+    "base",
+    "prefix"
+  ],
+  "below": [
+    "suffix"
+  ],
+  "core": [
+    "base",
+    "suffix",
+    "cannotattachsuffix",
+    "attached-suffix"
   ]
 }
