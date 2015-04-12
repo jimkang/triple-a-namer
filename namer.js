@@ -85,20 +85,20 @@ function createNamer(opts) {
       );
     }
 
-    var suffixChanceBar = 0;
-    if (group.prefix) {
-      suffixChanceBar += 1;
-    }
-    if (group.preprefix) {
-      suffixChanceBar += 1;
-    }
-
     if (wordPool[group.base].indexOf('cannotattachsuffix') === -1 &&
       probable.roll(10) === 0) {
       
       group.attachedSuffix = probable.pickFromArray(
         _.without(wordsForTypes['attached-suffix'], group.base)
       );
+    }
+
+    var suffixChanceBar = 0;
+    if (group.prefix) {
+      suffixChanceBar += 2;
+    }
+    if (group.preprefix) {
+      suffixChanceBar += 1;
     }
 
     if (probable.rollDie(3) > suffixChanceBar) {
@@ -112,7 +112,7 @@ function createNamer(opts) {
 
   function addArticlesToGroup(group) {
     if (wordPool[group.base].indexOf('article-object') !== -1) {
-      if (probable.roll(2) === 0) {
+      if (probable.roll(4) === 0) {
         // group.article = (probable.roll(10) === 0 ? 'a' : 'the');
         group.article = 'the';
       }
