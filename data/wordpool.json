@@ -588,7 +588,10 @@
     "prefix"
   ],
   "day": [
-    "base"
+    "base",
+    "cannotbesuffixed",
+    "attached-suffix",
+    "cannotattachsuffix"
   ],
   "god": [
     "base",
@@ -632,18 +635,6 @@
     "numeric-ordinal"
   ],
   "4": [
-    "numeric-ordinal"
-  ],
-  "5": [
-    "numeric-ordinal"
-  ],
-  "6": [
-    "numeric-ordinal"
-  ],
-  "7": [
-    "numeric-ordinal"
-  ],
-  "8": [
     "numeric-ordinal"
   ],
   "II": [
@@ -716,6 +707,49 @@
     "suffix",
     "cannotattachsuffix",
     "attached-suffix",
+    "cannotbesuffixed"
+  ],
+  "titan": [
+    "base",
+    "suffix",
+    "prefix"
+  ],
+  "invasion": [
+    "base",
+    "suffix",
+    "cannotattachsuffix"
+  ],
+  "devastation": [
+    "base",
+    "suffix",
+    "prefix",
+    "cannotattachsuffix"
+  ],
+  "classic": [
+    "ordinal"
+  ],
+  "first": [
+    "prefix",
+    "cannotbeprefixed"
+  ],
+  "second": [
+    "prefix",
+    "cannotbeprefixed"
+  ],
+  "recoil": [
+    "base",
+    "suffix",
+    "cannotattachsuffix"
+  ],
+  "killer": [
+    "base",
+    "prefix",
+    "suffix"
+  ],
+  "instinct": [
+    "base",
+    "suffix",
+    "cannotattachsuffix",
     "cannotbesuffixed"
   ]
 }
