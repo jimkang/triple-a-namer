@@ -44,17 +44,17 @@
     "suffix",
     "article-object"
   ],
+  "wars": [
+    "base",
+    "of-object",
+    "suffix",
+    "article-object"
+  ],
   "warfare": [
     "base",
     "of-object",
     "suffix",
     "cannotattachsuffix"
-  ],
-  "call": [
-    "base",
-    "article-object",
-    "cannotattachsuffix",
-    "cannotbeprefixed"
   ],
   "survival": [
     "base",
@@ -492,6 +492,12 @@
   "director's cut": [
     "ordinal"
   ],
+  "pack": [
+    "ordinal"
+  ],
+  "legacy": [
+    "ordinal"
+  ],
   "night": [
     "attached-suffix",
     "suffix",
@@ -514,6 +520,9 @@
     "prefix"
   ],
   "EX": [
+    "ordinal"
+  ],
+  "pro": [
     "ordinal"
   ],
   "attack": [
@@ -584,7 +593,8 @@
   "judgment": [
     "base",
     "suffix",
-    "prefix"
+    "prefix",
+    "cannotattachsuffix"
   ],
   "day": [
     "base",
@@ -688,7 +698,6 @@
   ],
   "lands": [
     "attached-suffix",
-    "base",
     "cannotattachsuffix"
   ],
   "line": [
@@ -755,5 +764,92 @@
     "prefix",
     "cannotattachsuffix",
     "cannotbeprefixed"
+  ],
+  "scorpion": [
+    "base",
+    "prefix",
+    "article-object",
+    "suffix"
+  ],
+  "star": [
+    "base",
+    "prefix",
+    "article-object",
+    "suffix"
+  ],
+  "stars": [
+    "base",
+    "article-object",
+    "of-object",
+    "suffix",
+    "cannotattachsuffix"
+  ],
+  "space": [
+    "base",
+    "prefix",
+    "article-object",
+    "suffix"
+  ],
+  "dragon": [
+    "base",
+    "prefix",
+    "article-object",
+    "suffix"
+  ],
+  "dragons": [
+    "base",
+    "article-object",
+    "of-object",
+    "suffix"
+  ],
+  "soccer": [
+    "base",
+    "prefix",
+    "of-object",
+    "suffix"
+  ],
+  "racing": [
+    "base",
+    "suffix"
+  ],
+  "fighter": [
+    "base",
+    "article-object",
+    "suffix",
+    "attached-suffix"
+  ],
+  "street": [
+    "base",
+    "article-object",
+    "prefix",
+    "suffix"
+  ],
+  "streets": [
+    "article-object",
+    "suffix",
+    "cannotattachsuffix"
+  ],
+  "time": [
+    "base",
+    "article-object",
+    "prefix",
+    "suffix"
+  ],
+  "golf": [
+    "base",
+    "prefix",
+    "of-object",
+    "suffix"
+  ],
+  "mahjong": [
+    "base",
+    "prefix",
+    "of-object",
+    "suffix"
+  ],
+  "puzzle": [
+    "prefix",
+    "cannotbeprefixed",
+    "suffix"
   ]
 }

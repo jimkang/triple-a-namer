@@ -9,8 +9,8 @@ var namer = createNamer({
   random: seedrandom(seed)
 });
 
-for (var i = 0; i < 10; ++i) {
+for (var i = 0; i < 100; ++i) {
   var nameGroups = namer.name();
-  console.log(nameGroups);
+  // console.log(nameGroups);
   console.log(namer.assembleGroupsIntoTitle(nameGroups));
 }

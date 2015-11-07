@@ -50,9 +50,7 @@ function createNamer(opts) {
     var groups = [group1];
 
     if (probable.roll(3) === 0) {
-      var group2 = addConnectorToGroup(addArticlesToGroup(
-        makeGroup(wordsForTypes.base)
-      ));
+      var group2 = addConnectorToGroup(makeGroup(wordsForTypes.base));
 
       groups.push(group2);
     }
